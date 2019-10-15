@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="{{ url_for('static',filename='js/jquery-3.4.0.js')}}"></script>
+    <!-- <script type="text/javascript" src="static/js/jquery-3.4.0.js"></script> -->
+
+    <!-- load image -->
+    <!-- <img src="{{url_for('static',filename='images/xxx.png')}}" alt=""> -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css')}}">
+</head>
+<body>
+    <script>
+        if(jQuery){
+            alert('jQoery is loaded')
+        }else{
+            alert('jQoery not yet loading')
+        }
+    </script>
+    
+    <div>
+        okokokok
+    </div>
+</body>
+</html>
