@@ -6,8 +6,12 @@ app = Flask(__name__)
 @app.route('/')
 def index():
 
-    return render_template('index_static.html')
+    return render_template('index_extend.html')
 
+@app.route('/item')
+def item():
+
+    return render_template('item.html')
 # def shop():
 
 #     books = [{'name':'java','price':300},{'name':'ruby','price':400},{'name':'python','price':200}]

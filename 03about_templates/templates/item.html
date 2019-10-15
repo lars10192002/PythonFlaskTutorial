@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+
+    {% extends 'base.html' %}
+    {% block title %}
+        this is item title
+    {% endblock  %}
+    {% block body %}
+        <h3> this is item content </h3>
+        get data form : <h3> {{self.title()}} </h3>
+    {% endblock  %}
