@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>this is index</title>
+</head>
+<body>
+    <h1>Wellcon</h1>
+    <!-- 我是註釋 -->
+    {#我也是註釋#}
+    {{title}}
+    <br>
+    {{author}}
+    <br>
+    {% if rand == 1 %}
+        <h1>抽到{{rand}}等獎</h1>
+    {% elif rand == 2 %}
+        <h1>抽到{{rand}}等獎</h1>
+    {% else %}
+        <h1>沒中下次再來</h1>
+    {% endif %}
+</body>
+</html>

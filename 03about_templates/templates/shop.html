@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .line{
+            display: inline-block;
+            height: 1px;
+            width: 100%;
+            background-color: #4af;
+            overflow: hidden;
+            vertical-align: middle;
+        }
+
+        .border{
+            border:#0000FF 5px solid;
+            margin: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    {{books}}
+
+    {% for book in books %}
+        <li style="list-style-type:none" class="{{ loop.index|border_class}}">
+            {{book.name|capitalize}}
+            {{book.price}}
+            <span class="{{ loop.index|index_class}}"></span>
+        </li>
+        <!-- <tr>
+            <td>{{book.name|capitalize}}</td>
+
+            <td>{{book.price}}</td>
+        </tr> -->
+    {% endfor %}
+    {{'HI'|replace('H','x')}}
+    {{[01,2,30,55,22,90,100]|first}}
+    {{[01,2,30,55,22,90,100]|last}}
+    {{[01,2,30,55,22,90,100]|count}}
+    {{[01,2,30,55,22,90,100]|sort}}
+    {{[01,2,30,55,22,90,100]|join('-')}}
+    {{18.5555|round(2,'floor')}}
+    {{-2|abs}}
+</body>
+</html>
