@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route('/')
 def index():
 
-    return render_template('index_include.html')
+    return render_template('index_set_with.html')
 
 # def shop():
 
