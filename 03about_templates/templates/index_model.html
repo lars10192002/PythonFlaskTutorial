@@ -7,16 +7,21 @@
     <title>Document</title>
 </head>
 <body>
-   {% macro input(name, type='text', value='')-%} 
-        <input type="{{type}}" name="{{name}}" value="{{value|e}}" size="{{size}}">
-   {%- endmacro%}
+    {% comment %} {% import 'form.html' as form  %}
+    <div>
+    <p>Username: {{form.input('name')}}</p>
+    <p>Password: {{form.input('password',type='password')}}</p>
+    <p>Login: {{form.input('submit',type='submit',value='login')}}</p>
 
-   <div>
-
+   </div> {% endcomment %}
+    
+    {% from 'form.html' import input  %}
+    <div>
     <p>Username: {{input('name')}}</p>
     <p>Password: {{input('password',type='password')}}</p>
     <p>Login: {{input('submit',type='submit',value='login')}}</p>
 
    </div>
+
 </body>
 </html>
